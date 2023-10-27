@@ -1,3 +1,10 @@
 body {
-    background-image: url(/src/assets/img/PostEnsinoRealidade.jpg);
+    background-image: linear-gradient(black, black), url(/src/assets/img/PostEnsinoRealidade.jpg);
+    background-size: cover;
+    background-blend-mode: saturation;
+    
+}
+
+img {
+    width: 10vh;
 }
