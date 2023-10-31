@@ -1,103 +1,127 @@
+@font-face {
+  font-family: Montserrat;
+  src: url(../font/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: Montserrat-Bold;
+  src: url(../font/Montserrat-Black.ttf);
+}
+
+:root {
+  --font-texto: Montserrat;
+  --font-titulo: Montserrat-Bold;
+  --cor-texto-form: rgb(200, 200, 200);
+}
 body {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-image: linear-gradient(black, black), url(/src/assets/img/PostEnsinoRealidade.jpg);
-    background-size: cover;
-    background-blend-mode: saturation;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: linear-gradient(black, black),
+    url(/src/assets/img/PostEnsinoRealidade.jpg);
+  background-size: cover;
+  background-blend-mode: saturation;
 }
 
 main {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
 header {
-    display: flex;
-    flex-direction: row;
-    margin-top: 150px;
-    margin-bottom: 30px;
+  display: flex;
+  flex-direction: row;
+  margin-top: 150px;
+  margin-bottom: 30px;
 }
 
 img {
-    width: 10vh;
-    display: flex;
-    justify-content: flex-start;
+  width: 10vh;
+  display: flex;
+  justify-content: flex-start;
 }
 
+div > h1 {
+  display: flex;
+  width: 11vw;
+  margin-left: 5px;
+  margin-bottom: 10px;
+  color: white;
+  font-family: var(--font-texto);
+  font-weight: bold;
+  font-style: italic;
+  font-size: larger;
+}
 
-header>h1 {
+#nome-logo {
     display: flex;
-    width: 11vw;
-    margin-left: 5px;
-    color: white;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
-    font-style: italic;
-    font-size: larger;
-
+    flex-direction: column;
 }
 
 form {
-    width: 30vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
 }
 
 form::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: black;
-    background-position: bottom;
-    z-index: -1;
-    opacity: 0.2;
-    border-radius: 25px;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: black;
+  background-position: bottom;
+  z-index: -1;
+  opacity: 0.3;
+  border-radius: 25px;
 }
 
-form>h1 {
-    font-size: 5vh;
-    color: rgb(200, 200, 200);
-    margin: 1rem 0rem 1rem 0rem;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-
+form > h1 {
+  font-size: 5vh;
+  color: var(--cor-texto-form);
+  margin: 1rem 0rem 1rem 0rem;
+  font-family: var(--font-titulo);
 }
 
 p {
-    font-size: small;
-    color: rgb(200, 200, 200);
-    font-weight: bold;
+  font-family: var(--font-texto);
+  font-size: small;
+  color: var(--cor-texto-form);
+  font-weight: bold;
+  text-shadow: 1px 1px 2px black;;
 }
 
-input[type=email],
-input[type=password] {
-    height: 5vh;
-    width: 15vw;
-    background-color: rgb(80, 80, 80);
-    border: none;
-    border-radius: 25px;
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 1rem 1rem 1rem 1rem;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-input[type=button] {
-    justify-content: space-around;
-    height: 5vh;
-    width: 5vw;
-    border-radius: 25px;
-    background-color: black;
-    border: none;
-    color: rgb(200, 200, 200);
-    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    font-weight: bold;
+input[type="email"],
+input[type="password"] {
+  height: 5vh;
+  width: 20vw;
+  background-color: rgb(80, 80, 80);
+  border: none;
+  border-radius: 25px;
+  color: var(--cor-texto-form);
+  font-family: var(--font-texto);
+  padding: 1rem 1rem 1rem 1rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
 }
 
 #form-buttons {
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: space-around;
+  width: 30vw;
+  margin-bottom: 15px;
+}
+
+input[type="button"] {
+  height: 2.5rem;
+  width: 10rem;
+  border-radius: 25px;
+  background-color: black;
+  border: none;
+  color: rgb(200, 200, 200);
+  font-family: var(--font-texto);
+  font-weight: bold;
 }
